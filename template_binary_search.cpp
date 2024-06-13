@@ -35,4 +35,18 @@ int main()
   {
     cout << "Element found at index " << result << endl;
   }
+
+  double arr2[] = {1.1, 2.2, 3.3, 4.4, 5.5};
+  int n2 = (sizeof(arr2) / sizeof(double));
+  double key2 = 4.4;
+  int result2 = binarySearch(arr2, 0, n2 - 1, key2);
+  if (result2 == -1)
+  {
+    cout << "Element not found." << endl;
+  }
+  else
+  {
+    cout << "Element found at index " << result2 << endl;
+  }
+  return 0;
 }

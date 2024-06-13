@@ -21,11 +21,11 @@ void withdraw()
   cin >> amt;
   if (amt <= 0)
   {
-    throw invalid_argument("Invalid Deposit amount");
+    throw invalid_argument("Insufficient balance");
   }
   if (amt > bal)
   {
-    throw runtime_error("Insufficient balance");
+    throw runtime_error("Invalid Deposit amount");
   }
   bal = bal - amt;
   cout << "New balance: " << bal << endl;

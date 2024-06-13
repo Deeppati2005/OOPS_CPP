@@ -15,9 +15,9 @@ public:
 class B
 {
 public:
-  void add(A r)
+  void add(A &obj)
   {
-    cout << "Sum of 2 nos are : " << r.a + r.b;
+    cout << "Sum of 2 nos are : " << obj.a + obj.b;
   }
 };
 int main()

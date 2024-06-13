@@ -2,7 +2,7 @@
 using namespace std;
 
 template <class T>
-int linearSearch(T arr[], int size, T key)
+ T linearSearch(T arr[], int size, T key)
 {
   for (int i = 0; i < size; i++)
   {
@@ -16,7 +16,7 @@ int linearSearch(T arr[], int size, T key)
 
 int main()
 {
-  int arr1[] = {1, 2, 3, 4, 5};
+  int arr1[] = {1, 2, 4, 5 ,3};
   int key1 = 3;
   int size1 = sizeof(arr1) / sizeof(arr1[0]);
   int result1 = linearSearch(arr1, size1, key1);

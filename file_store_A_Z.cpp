@@ -3,9 +3,10 @@
 using namespace std;
 int main()
 {
-  ofstream outf("alpha.txt");
+  ofstream file;
+  file.open("alpha.txt");
   for (char c = 'A'; c <= 'Z'; c++)
   {
-    outf << c << " ";
+    file << c << " ";
   }
 }

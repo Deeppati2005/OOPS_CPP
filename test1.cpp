@@ -1,13 +1,19 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
 using namespace std;
-class test
-{
-  public:
-    virtual void fun() = 0;
-    v
-};
-int main()
-{
-  test *T;
-  T->fun();
+
+int main() {
+  char name[50];
+  string address;
+
+  cout << "Enter your name: ";
+  cin.getline(name, 50);
+
+  cout << "Enter your address: ";
+  getline(cin, address);
+
+  cout << "Name: " << name << endl;
+  cout << "Address: " << address << endl;
+
+  return 0;
 }

@@ -1,4 +1,5 @@
-  // void setData(int value)
+MyClass()
   // {
-  //   *data = value;
+  //   cout << "Default constructor called" << endl;
+  //   data = 0;
   // }

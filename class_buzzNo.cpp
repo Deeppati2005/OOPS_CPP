@@ -7,9 +7,9 @@ public:
   {
     if (n % 7 == 0 || n % 10 == 7)
     {
-      return true;
+      return 1;
     }
-    return false;
+    return 0;
   }
 };
 int main()

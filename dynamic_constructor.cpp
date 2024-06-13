@@ -1,41 +1,26 @@
 #include <iostream>
 using namespace std;
 
-class MyClass
+class geeks
 {
-private:
-  int *data;
+  const char *p;
 
 public:
-  MyClass()
+  geeks() // default constructor
   {
-    data = new int; // Allocate memory dynamically
-    *data = 0;      // Initialize data
-    cout << "Dynamic constructor called" << endl;
+    // allocating memory at run time
+    p = new char[6];
+    p = "geeks";
   }
 
-  ~MyClass()
+  void display()
   {
-    delete data; // Deallocate memory
-    cout << "Destructor called" << endl;
-  }
-
-  void setData(int value)
-  {
-    *data = value;
-  }
-
-  int getData()
-  {
-    return *data;
+    cout << p << endl;
   }
 };
 
 int main()
 {
-  MyClass obj;
-  obj.setData(42);
-  cout << "Data: " << obj.getData() << endl;
-
-  return 0;
+  geeks obj;
+  obj.display();
 }

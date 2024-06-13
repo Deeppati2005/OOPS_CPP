@@ -1,35 +1,38 @@
 #include <iostream>
 using namespace std;
-int prime(int n)
+class test
 {
-  int i;
-  if (n == 0 || n == 1)
+public:
+  int prime(int n)
   {
-    return 1;
-  }
-  for (i = 2; i <= n / 2; i++)
-  {
-    if (n % i == 0)
+    if (n <= 1)
     {
       return 0;
     }
-  }
-  return 1;
-}
-int prime(int a, int b)
-{
-  int i, j;
-  for (i = a; i <= b; i++)
-  {
-    if (prime(i))
+    for (int i = 2; i <= n / 2; i++)
     {
-      cout << i << " ";
+      if (n % i == 0)
+      {
+        return 0;
+      }
+    }
+    return 1;
+  }
+  int prime(int a, int b)
+  {
+    int i;
+    for (i = a; i <= b; i++)
+    {
+      if (prime(i))
+      {
+        cout << i << " ";
+      }
     }
   }
-}
+};
 int main()
 {
-  int a;
-  prime(5);
-  prime(2, 10);
+  test t;
+  t.prime(5);
+  t.prime(2, 10);
 }

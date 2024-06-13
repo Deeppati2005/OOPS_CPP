@@ -5,7 +5,6 @@ class Sal
 public:
   int os;
 
-public:
   int calcNS(int os)
   {
     int ns = os + os * 0.1;

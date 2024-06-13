@@ -13,10 +13,10 @@ public:
   }
 
   // Copy constructor
-  MyClass(MyClass &other)
+  MyClass(MyClass &value)
   {
     cout << "Copy constructor called" << endl;
-    data = other.data;
+    data = value.data;
   }
 };
 
