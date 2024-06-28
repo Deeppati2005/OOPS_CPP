@@ -1,19 +1,30 @@
 #include <iostream>
-#include <string>
 using namespace std;
+class test
+{
+protected:
+  int protectvar;
 
-int main() {
-  char name[50];
-  string address;
+private:
+  int privatevar;
 
-  cout << "Enter your name: ";
-  cin.getline(name, 50);
-
-  cout << "Enter your address: ";
-  getline(cin, address);
-
-  cout << "Name: " << name << endl;
-  cout << "Address: " << address << endl;
-
-  return 0;
+public:
+  void show()
+  {
+    cout << "Protect : " << protectvar << endl;
+    cout << "Private : " << privatevar << endl;
+  }
+  friend test fun(test &obj);
+};
+test fun(test &obj)
+{
+  obj.privatevar = 20;
+  obj.protectvar = 30;
+  return obj;
+}
+int main()
+{
+  test ob1;
+  ob1 = fun(ob1);
+  ob1.show();
 }

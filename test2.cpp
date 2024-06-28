@@ -1,40 +1,30 @@
-// C++ program to create a global function as a friend
-// function of some class
 #include <iostream>
 using namespace std;
-
-class base
+class test
 {
-private:
-  int private_variable;
-
 protected:
-  int protected_variable;
+  int protectvar;
+
+private:
+  int privatevar;
 
 public:
-  base()
+  void show()
   {
-    private_variable = 10;
-    protected_variable = 99;
+    cout << "Protect : " << protectvar << endl;
+    cout << "Private : " << privatevar << endl;
   }
-
-  // friend function declaration
-  friend void friendFunction(base &obj);
+  friend test fun(test &obj);
 };
-
-// friend function definition
-void friendFunction(base &obj)
+test fun(test &obj)
 {
-  cout << "Private Variable: " << obj.private_variable
-       << endl;
-  cout << "Protected Variable: " << obj.protected_variable;
+  obj.privatevar = 20;
+  obj.protectvar = 30;
+  return obj;
 }
-
-// driver code
 int main()
 {
-  base object1;
-  friendFunction(object1);
-
-  return 0;
+  test ob1;
+  ob1 = fun(ob1);
+  ob1.show();
 }
